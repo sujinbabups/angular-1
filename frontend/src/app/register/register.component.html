@@ -1,0 +1,70 @@
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md">
+    <div class="mb-4">
+      <label class="block text-black font-bold mb-2" for="name">
+        Name
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="name"
+        type="text"
+        [(ngModel)]="name"
+        [ngModelOptions]="{standalone:true}"
+        placeholder="Enter your name"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-black font-bold mb-2" for="email">
+        Email
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="email"
+        type="email"
+        [(ngModel)]="email"
+        [ngModelOptions]="{standalone:true}"
+        placeholder="Enter your email"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-black font-bold mb-2" for="password">
+        Password
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="password"
+        type="password"
+        [(ngModel)]="password"
+        [ngModelOptions]="{standalone:true}"
+        placeholder="Enter your password"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-black font-bold mb-2" for="confirmPassword">
+        Confirm Password
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="confirmPassword"
+        type="password"
+        placeholder="Confirm your password"
+      />
+    </div>
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-4"
+        type="submit"
+        (click)="save()"
+      >
+        Submit
+      </button>
+      <button
+        class="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+        (click)="login()"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>

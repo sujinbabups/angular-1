@@ -1,0 +1,59 @@
+<div class="flex justify-center items-center min-h-screen bg-gray-200">
+  <div class="p-6 shadow-lg rounded-md bg-gray-100 w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Add Product</h2>
+    
+    <div class="mb-4">
+      <label class="block font-medium text-black">Product ID</label>
+      <input
+        type="text"
+        [(ngModel)]="id"
+        class="w-full p-2 border border-gray-300 rounded-md"
+        placeholder="Enter product ID"
+      />
+    </div>
+  
+    <div class="mb-4">
+      <label class="block font-medium text-black">Product Name</label>
+      <input
+        type="text"
+        [(ngModel)]="product"
+        class="w-full p-2 border border-gray-300 rounded-md"
+        placeholder="Enter product name"
+      />
+    </div>
+  
+    <div class="mb-4">
+      <label class="block font-medium text-black">Quantity</label>
+      <input
+        type="number"
+        [(ngModel)]="quantity"
+        class="w-full p-2 border border-gray-300 rounded-md"
+        placeholder="Enter quantity"
+      />
+    </div>
+  
+    <div class="text-center">
+      <button (click)="save()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+        Add Product
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Listing products -->
+<div class="flex justify-center items-center min-h-screen bg-gray-200 mt-6">
+  <div class="p-6 shadow-lg rounded-md bg-gray-100 w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Product List</h2>
+  
+    <div *ngFor="let product of products" class="flex justify-between items-center mb-4">
+      <div>
+        <p><strong>ID:</strong> {{ product.id }}</p>
+        <p><strong>Product:</strong> {{ product.product }}</p>
+        <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+      </div>
+      <button (click)="deleteProduct(product.id)" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

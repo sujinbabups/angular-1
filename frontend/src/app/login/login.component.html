@@ -1,0 +1,29 @@
+<div class="shadow border p-8 w-full max-w-sm mx-auto">
+    <form>
+        <h2 class="text-2xl font-semibold text-center mb-6">New User Login</h2>
+        <div class="flex flex-col space-y-4">
+            <label>Email</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="email"
+                type="email"
+                [(ngModel)]="email" 
+                [ngModelOptions]="{standalone:true}"
+                placeholder="Enter your email"
+            />          
+            <label>Password</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="password"
+                type="password"
+                [(ngModel)]="password" 
+                [ngModelOptions]="{standalone:true}"
+                placeholder="Enter your password"
+            />              
+        </div>
+        <div class="flex justify-center space-x-4 mt-6">
+            <button class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-800" (click)="login()">Login</button>
+            <button class="px-6 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-600" (click)="signin()">Sign In</button>
+        </div>
+    </form>
+</div>
