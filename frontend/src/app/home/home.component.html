@@ -1,4 +1,12 @@
-<div class="flex justify-center items-center min-h-screen bg-gray-200">
+<div class="relative flex justify-center items-center min-h-screen bg-gray-200">
+  <!-- Back to Home Button -->
+  <button 
+    (click)="goToHome()"
+    class="absolute top-4 right-4 px-4 py-2 bg-green-600 text-white font-bold rounded-md hover:bg-green-700"
+  >
+    Home
+  </button>
+
   <div class="p-6 shadow-lg rounded-md bg-gray-100 w-full max-w-md">
     <h2 class="text-2xl font-semibold mb-4 text-center">Add Product</h2>
     

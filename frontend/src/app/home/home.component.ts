@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';  
 import {MatButtonModule} from '@angular/material/button';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class HomeComponent {
   quantity: string = "";
   products: any[] = []; 
 
-  constructor(private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.getAllProducts(); 
@@ -54,4 +55,9 @@ export class HomeComponent {
   save() {
     this.enter();
   }
+
+  goToHome() {
+    this.router.navigateByUrl('/');
+  }
+  
 }
